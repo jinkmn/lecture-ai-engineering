@@ -117,7 +117,7 @@ def test_model_accuracy(train_model):
     # 予測と精度計算
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
-    f1 = f1_score(y_test,y_pred)
+    f1 = f1_score(y_test, y_pred)
 
     # Titanicデータセットでは0.75以上の精度が一般的に良いとされる
     assert accuracy >= 0.75, f"モデルの精度が低すぎます: {accuracy}"
@@ -174,7 +174,3 @@ def test_model_reproducibility(sample_data, preprocessor):
     assert np.array_equal(
         predictions1, predictions2
     ), "モデルの予測結果に再現性がありません"
-
-
-
-
